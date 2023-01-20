@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+    - name: ⭐ Suggest a Feature or Change
+      url: https://github.com/dlxmedia/www.eplay.com/discussions/new?category=ideas
+      about: Help the product team
+    - name: 👍 Vote for the next feature
+      url: https://github.com/dlxmedia/www.eplay.com/discussions/categories/ideas?discussions_q=category%3AIdeas+sort%3Atop+created%3A%3E%3D2022-10-01
+      about: Upvote what you think we should do next!
