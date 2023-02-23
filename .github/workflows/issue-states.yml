@@ -17,5 +17,5 @@ jobs:
         with:
           github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           open-issue-columns: ''
-          closed-issue-columns: 'Closed, Done, Archived'
+          closed-issue-columns: 'Closed, Done'
           log-output: true
