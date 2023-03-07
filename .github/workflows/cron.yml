@@ -4,7 +4,8 @@ on:
   workflow_dispatch:
   # Triggers the workflow every 5 minutes
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "0 17 * * 1-5"
+    - cron: "0 0 * * 1-5"
 
     # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
