@@ -17,8 +17,8 @@ jobs:
         id: workqueue
         uses: fjogeleit/http-request-action@v1
         with:
-          url: 'https://smee.io/6a7eTzDyvdduDXo/cron/workqueue'
-          method: 'GET'
+          url: 'https://smee.io/6a7eTzDyvdduDXo'
+          method: 'POST'
           customHeaders: '{"Content-Type": "application/json", "Authorization": "Bearer test"}'
       - name: Show Response
         run: |
