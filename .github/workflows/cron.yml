@@ -1,0 +1,26 @@
+name: Cron Job Workflow
+
+on:
+  # Triggers the workflow every 5 minutes
+  schedule:
+    - cron: "*/5 * * * *"
+
+    # A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "cron"
+  cron:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run work queue command
+        id: workqueue
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: 'https://smee.io/6a7eTzDyvdduDXo/cron/workqueue'
+          method: 'GET'
+          customHeaders: '{"Content-Type": "application/json", "Authorization": "Bearer test"}'
+      - name: Show Response
+        run: |
+          echo ${{ steps.workqueue.outputs.response }}
+          echo ${{ steps.workqueue.outputs.headers }}
