@@ -1,15 +1,14 @@
 name: Cron Job Workflow
 
 on:
+  # Allows manual trigger
   workflow_dispatch:
-  # Triggers the workflow every 5 minutes
+  # Triggers the workflow at 9am / 4pm LA time - from Monday to Friday
   schedule:
     - cron: "0 17 * * 1-5"
     - cron: "0 0 * * 1-5"
 
-    # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "cron"
   cron:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
